@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拍卖行</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img src="jpg/logo.jpg" alt="logo"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">首页</a>
+                <li><a href="#">标的</a>
+                <li><a href="#">拍卖会</a>
+                <li><a href="#">拍卖流程</a>
+                <li><a href="#">我的拍卖</a>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="搜索标的">
+        </div>
+        <div class="login">
+            <button><a href="#">登录</a><tton>
+            <button><a href="#">注册</a><tton>
+        </div>
+    </div>
+
+
+    <div class="center">
+        <div class="auction-filter">
+            <div class="container">
+                <div class="auction-filter-line auction-type">
+                    <div class="auction-filter-key">拍卖会形式</div>
+                    <div class="auction-filter-value">
+                        <div class="value-no-limited">
+                            <a href="javascript:void(0)" class="active">
+                                <span>全部</span>
+                            </a>
+                        </div>
+                        <ul class="value-limited">
+                            <li>
+                                <a href="javascript:void(0)" data-mode="0" data-type="0">
+                                    <span>同步拍</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-mode="1" data-type="1">
+                                    <span>网络拍</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="auction-filter-line auction-type">
+                    <div class="auction-filter-key">委托类型</div>
+                    <div class="auction-filter-value">
+                        <div class="value-no-limited">
+                            <a href="javascript:void(0)" class="active">
+                                <span>全部</span>
+                            </a>
+                        </div>
+                        <ul class="value-limited">
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="0">
+                                    <span>司法委托</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="1">
+                                    <span>政府委托</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="2">
+                                    <span>金融资产机构委托</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="3">
+                                    <span>破产清算组委托</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="4">
+                                    <span>其他机构委托</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-attribute="5">
+                                    <span>个人委托</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="auction-filter-line auction-type">
+                    <div class="auction-filter-key">拍卖会阶段</div>
+                    <div class="auction-filter-value">
+                        <div class="value-no-limited">
+                            <a href="javascript:void(0)" class="active">
+                                <span>全部</span>
+                            </a>
+                        </div>
+                        <ul class="value-limited">
+                            <li>
+                                <a href="javascript:void(0)" data-status="1">
+                                    <span>正在进行</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-status="0">
+                                    <span>即将开始</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-status="2">
+                                    <span>已结束</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="auction-filter-line auction-type no-border">
+                    <div class="auction-filter-key">拍卖会时间</div>
+                    <div class="auction-filter-value">
+                        <div class="value-no-limited">
+                            <a href="javascript:void(0)" class="active" data-term="all">
+                                <span>全部</span>
+                            </a>
+                        </div>
+                        <ul class="value-limited">
+                            <li>
+                                <a href="javascript:void(0)" data-term="1">
+                                    <span>今天</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-term="3">
+                                    <span>近三天</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-term="7">
+                                    <span>近一周</span>
+                                </a>
+                            </li>
+                            <li class="time-warp">
+                                <ul class="iptgroup">
+                                    <li>开始时间：</li>
+                                    <li><input type="text" readonly="readonly" class="doubledate ipticon starttime" /></li>
+                                    <li style="width:20px;"></li>
+                                    <li>结束时间：</li>
+                                    <li><input type="text" readonly="readonly" class="doubledate ipticon endtime" /></li>
+                                    <a class="time-btn active" data-term="">确定</a>
+                                    <span class="error"></span>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="left-assembly">
+                <h1>拍卖会</h1>
+                <ul class="wrap-meeting">
+                    <li class="index-meeting">
+                        <div class="img-meeting">
+                            <img src="jpg/car.png" alt="car">
+                        </div>
+                        <div class="info-meeting">
+                            <h3>机动车拍卖会</h3>
+                            <p class="belong-style">拍卖公司：金诺国际拍卖有限公司</p>
+                            <p class="time-style">2019年10月10日&nbsp;09:00开始</p>
+                            <div class="btn-meeting">
+                                <a href="#">标的目录</a>
+                                <a href="#">拍卖大厅</a>
+                            </div>
+                            <div class="bottom-meeting clearfix">
+                                <p>浏览次数：66&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                <p>标的数量：99</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="index-meeting">
+                        <div class="img-meeting">
+                                <img src="jpg/house.png" alt="house">
+                            </div>
+                            <div class="info-meeting">
+                                <h3>房屋拍卖会</h3>
+                                <p class="belong-style">拍卖公司：山东正信拍卖有限公司</p>
+                                <p class="time-style">2019年10月10日&nbsp;13:00开始</p>
+                                <div class="btn-meeting">
+                                    <a href="#">标的目录</a>
+                                   <a href="#">拍卖大厅</a>
+                                </div>
+                                <div class="bottom-meeting clearfix">
+                                    <p>浏览次数：56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                    <p>标的数量：50</p>
+                                </div>
+                        </div>
+                    </li>>
+                    <li class="index-meeting">
+                            <div class="img-meeting">
+                                    <img src="jpg/land.png" alt="land">
+                                </div>
+                                <div class="info-meeting">
+                                    <h3>土地拍卖会</h3>
+                                    <p class="belong-style">拍卖公司：黑龙江贯通拍卖有限公司</p>
+                                    <p class="time-style">2019年10月10日&nbsp;15:00开始</p>
+                                    <div class="btn-meeting">
+                                        <a href="#">标的目录</a>
+                                        <a href="#">拍卖大厅</a>
+                                    </div>
+                                    <div class="bottom-meeting clearfix">
+                                        <p>浏览次数：89&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        <p>标的数量：36</p>
+                                    </div>
+                                </div>
+                       </li>
+
+                    <li class="index-meeting">
+                            <div class="img-meeting">
+                                    <img src="jpg/abandon.png" alt="abandon">
+                                </div>
+                                <div class="info-meeting">
+                                    <h3>废旧物资拍卖会</h3>
+                                    <p class="belong-style">拍卖公司：江苏网易拍卖有限公司</p>
+                                    <p class="time-style">2019年10月10日&nbsp;19:00开始</p>
+                                    <div class="btn-meeting">
+                                        <a href="#">标的目录</a>
+                                        <a href="#">拍卖大厅</a>
+                                    </div>
+                                    <div class="bottom-meeting clearfix">
+                                        <p>浏览次数：65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        <p>标的数量：56</p>
+                                    </div>
+                                </div>
+                    </li>
+                    
+                </ul>
+            </div>
+    </div>
+
+
+
+
+
+    
+
+    <div class="footer">
+        <div class="helps">
+            <div class="help">
+                <ul>
+                    <h3>竞买人帮助</h3>
+                    <li><a href="#">竞拍流程</a>
+                    <li><a href="#">出价规则</a>
+                    <li><a href="#">延时规则</a>
+                </ul>
+            </div>
+            <div class="help">
+                <ul>
+                    <h3>支付帮助</h3>
+                    <li><a href="#">如何报名交保证金</a>
+                    <li><a href="#">交保遇到限额</a>
+                    <li><a href="#">尾款如何支付</a>
+                </ul>
+            </div>
+            <div class="help">
+                <ul>
+                    <h3>常见问题</h3>
+                    <li><a href="#">退还保证金</a>
+                    <li><a href="#">悔拍怎么办</a>
+                    <li><a href="#">如何处理过户</a>
+                </ul>
+            </div>
+            <div class="help">
+                <ul>
+                    <h3>关于我们</h3>
+                    <li><a href="#">邮编:610101</a>
+                    <li><a href="#">客服专线:123456</a>
+                    <li><a href="#">联系地址:四川师范大学</a>
+                </ul>
+            </div>
+        </div>
+        <div class="others">
+            <ul>
+                <li>京公网安备：1101051611&nbsp;&nbsp;
+                <li>备案号：京ICP备13044676号&nbsp;&nbsp;
+                <li>拍卖平台网络科技股份有限公司
+            </ul>
+        </div>
+    </div>
+</body>
+<html>
